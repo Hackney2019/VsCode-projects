@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Johnny Cash</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: slategray;
+        font-weight: bold;
+      }
+      h2 {
+        text-align: center;
+        border: 3px solid black;
+        padding: 10px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 12px;
+        font-weight: lighter;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding: 30px, 15px, 15px, 30px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 25%;
+        border-radius: 15px;
+      }
+      button {
+        background: linear-gradient(to left top, rgb(161, 127, 127), gray);
+        color: white;
+        transition: all ease-in-out;
+        display: block;
+        margin: 0 auto;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        padding: 5px 10px 5px 10px;
+        font-size: 16px;
+        box-shadow: 8px 4px 4px gray;
+      }
+      button:hover {
+        color: white;
+        background: gray;
+      }
+      .read-more {
+        display: block;
+        text-decoration: none;
+        color: rgb(44, 165, 165);
+        margin-top: 15px;
+      }
+      .read-more:hover {
+        text-decoration: underline black;
+      }
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Who was Johnny Cash?</h1>
+    <hr />
+    <h2><em> The Man in Black!</em></h2>
+    <img
+      src="https://cdn.theatlantic.com/thumbor/5Y8bnvL5sXTZ5SAQLr2k2sfxfas=/0x0:2026x2026/655x655/media/img/posts/2021/12/CC_Metcalf_Cash/original.jpg"
+      alt="Johnny Cash"
+    />
+    <p>
+      John R. Cash (<span
+        >J. R. Cash; February 26, 1932 – September 12, 2003 </span
+      >) was an American singer-songwriter. Much of Cash's music contained
+      themes of sorrow, moral tribulation, and redemption, especially in the
+      later stages of his career.[4][5] He was known for his deep, calm
+      bass-baritone voice,[a][6] the distinctive sound of his Tennessee Three
+      backing band characterized by train-like chugging guitar rhythms, a
+      rebelliousness[7][8] coupled with an increasingly somber and humble
+      demeanor,[4] free prison concerts,[9] and a trademark all-black stage
+      wardrobe which earned him the nickname "The Man in Black".[b]
+      <br />
+
+      <a
+        href="https://en.wikipedia.org/wiki/Johnny_Cash"
+        target="blank"
+        class="read-more"
+      >
+        <strong> Read more at Wikipedia </strong>
+      </a>
+    </p>
+
+    <br />
+    <button class="subscribe-button">🎶 Subscribe Johhny Cash</button>
+    <div style="color: blueviolet">Page created by Samantha Woods</div>
+
+    <script>
+      function subscribe() {
+        let firstName = prompt("What is your first-name?");
+        let phoneNumber = prompt("What is your phonenumber?");
+        let age = prompt("How old are you?");
+        let heading = document.querySelector("h1");
+
+        alert(
+          "Thanks, " +
+            firstName +
+            "!" +
+            " We'll send more info to the phone number provided."
+        );
+        if (age > 18) {
+          heading.innerHTML = "Hey there " + firstName + ", you can subscribe!";
+        } else {
+          heading.innerHTML =
+            "We are sorry " + firstName + ", you cannot subscribe!";
+        }
+      }
+
+      let discoverButton = document.querySelector(".subscribe-button");
+      discoverButton.addEventListener("click", subscribe);
+    </script>
+  </body>
+</html>
